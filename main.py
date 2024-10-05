@@ -49,19 +49,11 @@ def read_file():
 def main():
     with open(coffee_path, 'r', encoding=encode) as coffee:
         coffee_file = coffee.read()
-        coffee_houses = json.loads(coffee_file)
+    coffee_houses = json.loads(coffee_file)
     apikey_of_user_coordinates = os.environ['API_KEY']
-    coffee_coordinates = []
-    pages = []
-    tooltip = "Вот одно место!"	
 
     your_place = input("Ваше местоположение - ")
     user_coords = fetch_coordinates(apikey_of_user_coordinates, your_place)
-
-    number_of_cafes_per_page = 5
-    coffee_in_page = number_of_cafes_per_page
-
-    coffee_houses = get_coffee_file_content("coffee.json", "CP1251")
 
     user_latitude, user_longitude = user_coords
 
@@ -69,14 +61,14 @@ def main():
 
     sorted_coffee_houses = get_nearest_coffee_houses(coffee_house_coordinates)
 
-    map_of_coffee = folium.Map(location=[user_longitude, user_latitude])
+    coffee_map = folium.Map(location=[user_longitude, user_latitude])
 
     for one_coffee_house in sorted_coffee_houses:
         folium.Marker(
             [one_coffee_house['Longitude'], one_coffee_house['Latitude']],
-            popup=one_coffee_house['title'], tooltip=tooltip).add_to(map_of_coffee)
+            popup=one_coffee_house['title'], tooltip='').add_to(coffee_map)
 
-    map_of_coffee.save("index.html")
+    coffee_map.save("index.html")
 
     app = Flask(__name__)
     app.add_url_rule('/', 'hello', read_file)
@@ -84,4 +76,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main
+    main()

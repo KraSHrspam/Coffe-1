@@ -1,0 +1,1 @@
+{"version":2,"languages":{"python-python3-poetry":{"specfileHash":"3e9fac424141400a4cd4156d4c6cbb69","lockfileHash":"283c37cacb6fc745f7c2c64681a795f0","guessedImports":["geopy","folium","requests","Flask"],"guessedImportsHash":"82c176b2ec8057c4d2de1f7a166d3576"}}}

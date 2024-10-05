@@ -6,12 +6,6 @@ from flask import Flask
 from geopy import distance
 
 
-def get_coffee_file_content(coffee_path, encode):
-	with open(coffee_path, 'r', encoding=encode) as coffee:	coffee_file = coffee.read()
-	coffee_houses = json.loads(coffee_file)
-	return coffee_houses
-
-
 def fetch_coordinates(apikey, place):
 	base_url = "https://geocode-maps.yandex.ru/1.x"
 	params = {"geocode": place, "apikey": apikey, "format": "json"}
@@ -53,6 +47,9 @@ def read_file():
 
 
 def main():
+	with open(coffee_path, 'r', encoding=encode) as coffee:
+		coffee_file = coffee.read()
+		coffee_houses = json.loads(coffee_file)
 	apikey_of_user_coordinates = os.environ['API_KEY']
 	coffee_coordinates = []
 	pages = []

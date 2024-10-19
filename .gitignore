@@ -1,0 +1,10 @@
+.chache/
+.pythonlibs/
+.upm/
+.replit
+poetry.lock
+pyproject.toml
+pyproject.toml.backup
+replit_zip_error_log.txt
+replit.nix
+Coffe-1.code-workspace

@@ -1,4 +1,3 @@
-import os
 import json
 import folium
 import requests
@@ -35,27 +34,27 @@ def main():
     your_place = input("Ваше местоположение - ")
     user_coords = fetch_coordinates(yandex_apikey, your_place)
 
-    user_latitude, user_longitude = user_coords
+    user_longitude, user_latitude = user_coords
 
     cofe_coords = []
     for coffee_house in coffee_houses:
-        latitude, longitude = coffee_house["geoData"]["coordinates"]
+        longitude, latitude = coffee_house["geoData"]["coordinates"]
         coffe_coordinates = {
             'title': coffee_house['Name'],
             'Latitude': latitude,
             'Longitude': longitude,
-            'Distance': distance.distance((latitude, longitude), (user_latitude, user_longitude)).km,
+            'Distance': distance.distance((longitude, latitude), (user_longitude, user_latitude)).km,
             }
         cofe_coords.append(coffe_coordinates)
 
     sorted_coffee = sorted(cofe_coords, key=get_coffee_distance)
     nearest_coffee_houses = sorted_coffee[:5]
 
-    coffee_map = folium.Map(location=[user_longitude, user_latitude])
+    coffee_map = folium.Map(location=[user_latitude, user_longitude])
 
     for one_coffee_house in nearest_coffee_houses:
         folium.Marker(
-            [one_coffee_house['Longitude'], one_coffee_house['Latitude']],
+            [one_coffee_house['Latitude'], one_coffee_house['Longitude']],
             popup=one_coffee_house['title'], tooltip='').add_to(coffee_map)
 
     coffee_map.save("index.html")

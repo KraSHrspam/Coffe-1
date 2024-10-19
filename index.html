@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<head>    
+<html>
+<head>
+    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
         <script>
@@ -9,41 +11,44 @@
     
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
     
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_eef04282120a4c4a82ba7189aa0a194d {
+                #map_e18bb03bdfd59b5ffec896b92688c371 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
                     left: 0.0%;
                     top: 0.0%;
                 }
+                .leaflet-container { font-size: 1rem; }
             </style>
         
 </head>
-<body>    
+<body>
     
-            <div class="folium-map" id="map_eef04282120a4c4a82ba7189aa0a194d" ></div>
+    
+            <div class="folium-map" id="map_e18bb03bdfd59b5ffec896b92688c371" ></div>
         
 </body>
-<script>    
+<script>
     
-            var map_eef04282120a4c4a82ba7189aa0a194d = L.map(
-                "map_eef04282120a4c4a82ba7189aa0a194d",
+    
+            var map_e18bb03bdfd59b5ffec896b92688c371 = L.map(
+                "map_e18bb03bdfd59b5ffec896b92688c371",
                 {
-                    center: [55.753605, 37.621094],
+                    center: [55.755864, 37.617698],
                     crs: L.CRS.EPSG3857,
                     zoom: 10,
                     zoomControl: true,
@@ -55,144 +60,158 @@
 
         
     
-            var tile_layer_75562e87c4ea4aecbda8d298c9e5b23d = L.tileLayer(
-                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_eef04282120a4c4a82ba7189aa0a194d);
+            var tile_layer_263c049a75b2e23e78cbe4927a91c9ea = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
         
     
-            var marker_88998853e960425d8f51c3ffc3490eb5 = L.marker(
-                [55.754660757023636, 37.621529],
+            tile_layer_263c049a75b2e23e78cbe4927a91c9ea.addTo(map_e18bb03bdfd59b5ffec896b92688c371);
+        
+    
+            var marker_ea914ea302d77344ef42c0ef949707b2 = L.marker(
+                [55.75579132932476, 37.614625717781195],
                 {}
-            ).addTo(map_eef04282120a4c4a82ba7189aa0a194d);
+            ).addTo(map_e18bb03bdfd59b5ffec896b92688c371);
         
     
-        var popup_576670564ee04bb286373660e3a2cb44 = L.popup({"maxWidth": "100%"});
+        var popup_3f10870f57004b8bd29796304e417c21 = L.popup({"maxWidth": "100%"});
 
         
-            var html_e1fc56007d7f4eee908c0da5a8709f1a = $(`<div id="html_e1fc56007d7f4eee908c0da5a8709f1a" style="width: 100.0%; height: 100.0%;">Bosco Cafe</div>`)[0];
-            popup_576670564ee04bb286373660e3a2cb44.setContent(html_e1fc56007d7f4eee908c0da5a8709f1a);
+            
+                var html_bcc80c95b6daf4e77b9ec4395ce000a8 = $(`<div id="html_bcc80c95b6daf4e77b9ec4395ce000a8" style="width: 100.0%; height: 100.0%;">Кофе Хауз</div>`)[0];
+                popup_3f10870f57004b8bd29796304e417c21.setContent(html_bcc80c95b6daf4e77b9ec4395ce000a8);
+            
         
 
-        marker_88998853e960425d8f51c3ffc3490eb5.bindPopup(popup_576670564ee04bb286373660e3a2cb44)
+        marker_ea914ea302d77344ef42c0ef949707b2.bindPopup(popup_3f10870f57004b8bd29796304e417c21)
         ;
 
         
     
     
-            marker_88998853e960425d8f51c3ffc3490eb5.bindTooltip(
+            marker_ea914ea302d77344ef42c0ef949707b2.bindTooltip(
                 `<div>
-                     Вот одно место!
+                     
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_02dbe52fe6ca40f297bfc31419dd8282 = L.marker(
+            var marker_afbd8a3b26893c6608bb5c24edd70e91 = L.marker(
                 [55.754660757023636, 37.621529],
                 {}
-            ).addTo(map_eef04282120a4c4a82ba7189aa0a194d);
+            ).addTo(map_e18bb03bdfd59b5ffec896b92688c371);
         
     
-        var popup_48a2eb1f03044fc9ac35135af047bd21 = L.popup({"maxWidth": "100%"});
+        var popup_5241d147ea40c57bd73f3fbf18652ace = L.popup({"maxWidth": "100%"});
 
         
-            var html_51d0cb51c4e04868940fb55e83292e00 = $(`<div id="html_51d0cb51c4e04868940fb55e83292e00" style="width: 100.0%; height: 100.0%;">КОФЕМАНИЯ</div>`)[0];
-            popup_48a2eb1f03044fc9ac35135af047bd21.setContent(html_51d0cb51c4e04868940fb55e83292e00);
+            
+                var html_37e20b58e0920ab9317371c8c1c10e48 = $(`<div id="html_37e20b58e0920ab9317371c8c1c10e48" style="width: 100.0%; height: 100.0%;">Bosco Cafe</div>`)[0];
+                popup_5241d147ea40c57bd73f3fbf18652ace.setContent(html_37e20b58e0920ab9317371c8c1c10e48);
+            
         
 
-        marker_02dbe52fe6ca40f297bfc31419dd8282.bindPopup(popup_48a2eb1f03044fc9ac35135af047bd21)
+        marker_afbd8a3b26893c6608bb5c24edd70e91.bindPopup(popup_5241d147ea40c57bd73f3fbf18652ace)
         ;
 
         
     
     
-            marker_02dbe52fe6ca40f297bfc31419dd8282.bindTooltip(
+            marker_afbd8a3b26893c6608bb5c24edd70e91.bindTooltip(
                 `<div>
-                     Вот одно место!
+                     
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_f3ccd714645145a3a1ead17ff0ea9825 = L.marker(
+            var marker_fb926b7c96d8ce321abc7e8b86e3c0a9 = L.marker(
+                [55.754660757023636, 37.621529],
+                {}
+            ).addTo(map_e18bb03bdfd59b5ffec896b92688c371);
+        
+    
+        var popup_216c183421deb62da4ced6d2480ebcb5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae905037c1bfa955bf44a5d1189cb581 = $(`<div id="html_ae905037c1bfa955bf44a5d1189cb581" style="width: 100.0%; height: 100.0%;">КОФЕМАНИЯ</div>`)[0];
+                popup_216c183421deb62da4ced6d2480ebcb5.setContent(html_ae905037c1bfa955bf44a5d1189cb581);
+            
+        
+
+        marker_fb926b7c96d8ce321abc7e8b86e3c0a9.bindPopup(popup_216c183421deb62da4ced6d2480ebcb5)
+        ;
+
+        
+    
+    
+            marker_fb926b7c96d8ce321abc7e8b86e3c0a9.bindTooltip(
+                `<div>
+                     
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f1bc6e5246ab8edb8ade06d69a4d955e = L.marker(
                 [55.75706419199997, 37.621987746],
                 {}
-            ).addTo(map_eef04282120a4c4a82ba7189aa0a194d);
+            ).addTo(map_e18bb03bdfd59b5ffec896b92688c371);
         
     
-        var popup_9bf733a5fc9c49a18a0fdecb38440bd5 = L.popup({"maxWidth": "100%"});
+        var popup_7d96ddbec121453453109ad7bc168540 = L.popup({"maxWidth": "100%"});
 
         
-            var html_851e8a6a2c2643c1801005c2dcf6e41d = $(`<div id="html_851e8a6a2c2643c1801005c2dcf6e41d" style="width: 100.0%; height: 100.0%;">Кофе Хауз</div>`)[0];
-            popup_9bf733a5fc9c49a18a0fdecb38440bd5.setContent(html_851e8a6a2c2643c1801005c2dcf6e41d);
+            
+                var html_5da0ece31d3767a7a824291bb70c7318 = $(`<div id="html_5da0ece31d3767a7a824291bb70c7318" style="width: 100.0%; height: 100.0%;">Кофе Хауз</div>`)[0];
+                popup_7d96ddbec121453453109ad7bc168540.setContent(html_5da0ece31d3767a7a824291bb70c7318);
+            
         
 
-        marker_f3ccd714645145a3a1ead17ff0ea9825.bindPopup(popup_9bf733a5fc9c49a18a0fdecb38440bd5)
+        marker_f1bc6e5246ab8edb8ade06d69a4d955e.bindPopup(popup_7d96ddbec121453453109ad7bc168540)
         ;
 
         
     
     
-            marker_f3ccd714645145a3a1ead17ff0ea9825.bindTooltip(
+            marker_f1bc6e5246ab8edb8ade06d69a4d955e.bindTooltip(
                 `<div>
-                     Вот одно место!
+                     
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var marker_eaff793f07f34898a915bc922c20fb4b = L.marker(
-                [55.75321475660388, 37.626224999999984],
+            var marker_c63141e55c58ff6deed1d8256c09ef2c = L.marker(
+                [55.76174967561974, 37.618939227308495],
                 {}
-            ).addTo(map_eef04282120a4c4a82ba7189aa0a194d);
+            ).addTo(map_e18bb03bdfd59b5ffec896b92688c371);
         
     
-        var popup_4e5accedfbc8491a9348404a1d701ecc = L.popup({"maxWidth": "100%"});
+        var popup_3be1c644595da63e252cd5fccfcbf2e4 = L.popup({"maxWidth": "100%"});
 
         
-            var html_cde886fb0cd64aab8be17677b1b69698 = $(`<div id="html_cde886fb0cd64aab8be17677b1b69698" style="width: 100.0%; height: 100.0%;">Кофейня Просвет</div>`)[0];
-            popup_4e5accedfbc8491a9348404a1d701ecc.setContent(html_cde886fb0cd64aab8be17677b1b69698);
+            
+                var html_e36e85282ff6021a94adb7a29caf2ce3 = $(`<div id="html_e36e85282ff6021a94adb7a29caf2ce3" style="width: 100.0%; height: 100.0%;">VOQUE-CAFE</div>`)[0];
+                popup_3be1c644595da63e252cd5fccfcbf2e4.setContent(html_e36e85282ff6021a94adb7a29caf2ce3);
+            
         
 
-        marker_eaff793f07f34898a915bc922c20fb4b.bindPopup(popup_4e5accedfbc8491a9348404a1d701ecc)
+        marker_c63141e55c58ff6deed1d8256c09ef2c.bindPopup(popup_3be1c644595da63e252cd5fccfcbf2e4)
         ;
 
         
     
     
-            marker_eaff793f07f34898a915bc922c20fb4b.bindTooltip(
+            marker_c63141e55c58ff6deed1d8256c09ef2c.bindTooltip(
                 `<div>
-                     Вот одно место!
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_40a7d4f3a4e34b989fa70feb770cdb40 = L.marker(
-                [55.759095208218326, 37.6248310792614],
-                {}
-            ).addTo(map_eef04282120a4c4a82ba7189aa0a194d);
-        
-    
-        var popup_435bbca933d648aca3495a52928bbb3e = L.popup({"maxWidth": "100%"});
-
-        
-            var html_e35e13e0f1b3413fab2574c64752c48a = $(`<div id="html_e35e13e0f1b3413fab2574c64752c48a" style="width: 100.0%; height: 100.0%;">Кофе и пирожок</div>`)[0];
-            popup_435bbca933d648aca3495a52928bbb3e.setContent(html_e35e13e0f1b3413fab2574c64752c48a);
-        
-
-        marker_40a7d4f3a4e34b989fa70feb770cdb40.bindPopup(popup_435bbca933d648aca3495a52928bbb3e)
-        ;
-
-        
-    
-    
-            marker_40a7d4f3a4e34b989fa70feb770cdb40.bindTooltip(
-                `<div>
-                     Вот одно место!
+                     
                  </div>`,
                 {"sticky": true}
             );
         
 </script>
+</html>

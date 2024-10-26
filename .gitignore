@@ -2,6 +2,7 @@
 .pythonlibs/
 .upm/
 .replit
+.env
 poetry.lock
 pyproject.toml
 pyproject.toml.backup

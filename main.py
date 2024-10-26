@@ -1,8 +1,10 @@
+import os
 import json
 import folium
 import requests
 from flask import Flask
 from geopy import distance
+from dotenv import load_dotenv
 
 
 def fetch_coordinates(apikey, place):
@@ -26,10 +28,11 @@ def read_file():
 
 
 def main():
+    load_dotenv()
     with open('coffee.json', 'r', encoding='CP1251') as coffee:
         coffee_file = coffee.read()
     coffee_houses = json.loads(coffee_file)
-    yandex_apikey = '70c8480a-feed-4906-8c79-0d6744fe1cf5'
+    yandex_apikey = os.environ['YANDEX_APIKEY']
 
     your_place = input("Ваше местоположение - ")
     user_coords = fetch_coordinates(yandex_apikey, your_place)
@@ -43,7 +46,7 @@ def main():
             'title': coffee_house['Name'],
             'Latitude': latitude,
             'Longitude': longitude,
-            'Distance': distance.distance((longitude, latitude), (user_longitude, user_latitude)).km,
+            'Distance': distance.distance((latitude, longitude), (user_latitude, user_longitude)).km,
             }
         cofe_coords.append(coffe_coordinates)
 
